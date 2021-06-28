@@ -1,0 +1,44 @@
+<div style="text-align: center; margin-top: 20%">
+    <h1>Web of Registries</h1>
+    <br><br>
+
+    <div style="width: 45%; margin: 0 auto;">
+
+        <uib-tabset active="active">
+            <uib-tab index="0" heading="Keyword">
+                <!--<search-bar></search-bar>-->
+                <form ng-submit="runSearch()">
+                    <input type="text" style="width: 100%; padding: 10px; border: 1px solid #ddd;"
+                           ng-model="search.queryString"
+                           placeholder="Enter search term(s)"/>
+                </form>
+            </uib-tab>
+            <uib-tab index="3">
+                <uib-tab-heading>
+                    BLAST<sup>&reg;</sup>
+                </uib-tab-heading>
+
+                <div style="margin-left: 0;">
+                    <textarea style="width: 100%; border: 1px solid #ddd; padding: 6px; font-size: 0.95em" rows="10"
+                              ng-model="search.blastQuery.sequence" placeholder="Enter DNA sequence"></textarea>
+                    <br>
+
+                    <select class="pull_down pull-left" ng-model="search.blastQuery.blastProgram">
+                        <option value="">Search Type</option>
+                        <option value="BLAST_N">Nucleotide Search (blastn)</option>
+                        <option value="TBLAST_X">Nucleotide Translated Search (tblastx)</option>
+                    </select>
+
+                    <div class="pull-right">
+                        <button class="btn btn-link">Reset</button>
+                        <button class="btn btn-primary" type="submit" ng-click="runSearch()">Search</button>
+                    </div>
+                </div>
+            </uib-tab>
+        </uib-tabset>
+    </div>
+</div>
+
+<div style="position: absolute; bottom: 10px; right: 5px">
+    <button class="btn btn-link" ng-click="showAddRegistryForm()">Add your registry</button>
+</div>

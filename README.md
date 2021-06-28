@@ -4,4 +4,6 @@ The Inventory of Composable Elements (ICE) implements the Web of Registries conc
 
 # Related Projects
 
-https://github.com/JBEI/ice
+[Inventory of Composable Elements] (https://github.com/JBEI/ice) : Open source biological part registry with support for proteins, seeds, strains, plasmids and associated sequence information
+[Open Vector Editor](https://github.com/TeselaGen/openVectorEditor) is used in ICE to display and edit sequences
+
